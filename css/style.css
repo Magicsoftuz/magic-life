@@ -52,7 +52,6 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
 }
 
@@ -74,6 +73,7 @@ body {
   letter-spacing: 17.4px;
   font-size: 24px;
   font-weight: 400;
+  margin-bottom: 60px;
 
   animation-name: moveInRight;
   animation-duration: 1.5s;
@@ -84,6 +84,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 @keyframes moveInLeft {
@@ -134,4 +135,28 @@ body {
   100% {
     transform: translate(0) rotate(360deg);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
