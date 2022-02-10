@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Magicsoftuz/magic-life#readme",
   "devDependencies": {
     "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
