@@ -18,6 +18,14 @@
     background-color: $color-white;
     color: $color-grey-dark;
   }
+  &--green {
+    background-image: linear-gradient(
+      to left,
+      $color-primary,
+      $color-primary-dark
+    );
+    color: $color-white;
+  }
   &::after {
     content: "";
     height: 100%;
