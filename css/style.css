@@ -251,6 +251,119 @@ body {
     width: 80%;
     float: right; }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  cursor: pointer;
+  text-align: center;
+  z-index: 300;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+  top: 6rem;
+  right: 6rem; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 200;
+  top: 6.5rem;
+  right: 6.5rem;
+  transition: all 0.5s; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(50); }
+
+.navigation__menu {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s;
+  visibility: hidden; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.77, 0.24, 0.35, 1.47);
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__menu {
+  width: 100%;
+  opacity: 1;
+  visibility: visible; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 2.8rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(105deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 0.5s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #7ed56f;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__menu .navigation__list {
+  left: 50%;
+  opacity: 1; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #777;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.3s; }
+  .navigation__icon::before {
+    top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
+
 .btn {
   text-transform: uppercase;
   text-decoration: none;
@@ -571,3 +684,49 @@ body {
 
 .form__radio-group .form-radio {
   display: none; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden; }
+  .popup__content {
+    width: 75%;
+    display: flex;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s cubic-bezier(0.63, 0.1, 0.2, 1.91);
+    transform: scale(0.25) translate(-100%, -100%);
+    transition-delay: 0.2s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translate(0, 0); }
+  .popup__left {
+    width: 33.333%; }
+  .popup__right {
+    width: 66.666%;
+    margin-left: 1rem; }
+    .popup__right .heading-secondary {
+      margin-bottom: 0 !important; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text__box {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .popup__text:first-child {
+    margin-right: 1rem; }

@@ -9,6 +9,35 @@
     <title>MagicLife</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav_check" />
+      <label for="nav_check" class="navigation__button"
+        ><span class="navigation__icon"></span
+      ></label>
+
+      <div class="navigation__background"></div>
+
+      <div class="navigation__menu">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">01 About MagicLife</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">02 Your Benefit</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">03 Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">04 Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">05 Book now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <header class="header">
       <div class="header__logo">
         <img
@@ -131,7 +160,7 @@
         </div>
         <div class="row">
           <div class="col-1-of-3">
-            <div class="card">
+            <div class="card" id="card">
               <div class="card__side card__side--front">
                 <div class="card__photo card__photo--1"></div>
                 <h3 class="card__heading card__heading--1">The sea explorer</h3>
@@ -151,7 +180,7 @@
                     <p class="card__price-box--only">Only</p>
                     <p class="card__price-box-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Buy now!</a>
+                  <a href="#popup" class="btn btn--white">Buy now!</a>
                 </div>
               </div>
             </div>
@@ -177,7 +206,7 @@
                     <p class="card__price-box--only">Only</p>
                     <p class="card__price-box-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Buy now!</a>
+                  <a href="#popup" class="btn btn--white">Buy now!</a>
                 </div>
               </div>
             </div>
@@ -203,7 +232,7 @@
                     <p class="card__price-box--only">Only</p>
                     <p class="card__price-box-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Buy now!</a>
+                  <a href="#popup" class="btn btn--white">Buy now!</a>
                 </div>
               </div>
             </div>
@@ -503,6 +532,41 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#card" class="popup__close">X</a>
+          <h2 class="heading-secondary">Start booking now!</h2>
+          <h3 class="heading-tertiary">
+            IMPORTANT – PLEASE READ THESE TERMS BEFORE BOOKING
+          </h3>
+          <div class="popup__text__box">
+            <p class="popup__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis, ipsa fuga maiores fugiat in amet debitis earum ullam
+              placeat tempore commodi id veniam voluptates architecto rerum
+              ipsam vero ea adipisci optio? Ea, voluptatum tempore itaque nihil
+              quo pariatur quam laboriosam!
+            </p>
+            <p class="popup__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              explicabo magnam omnis ipsam eum modi earum fuga sed cum
+              cupiditate dolore itaque maiores in incidunt dolorem perferendis
+              voluptas molestias, numquam beatae suscipit minima laborum quidem!
+              Harum in accusamus odio ipsam?
+            </p>
+          </div>
+
+          <a href="" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
+
     <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">This is a column 1 of 2</div>
