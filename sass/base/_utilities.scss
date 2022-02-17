@@ -3,12 +3,18 @@
 }
 .u-margin-bottom-small {
   margin-bottom: 1.5rem;
+  @include responsive(tab-port) {
+    margin-bottom: 0.5rem !important;
+  }
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
 }
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+  @include responsive(tab-port) {
+    margin-bottom: 2rem !important;
+  }
 }
 .u-margin-top-big {
   margin-top: 8rem;

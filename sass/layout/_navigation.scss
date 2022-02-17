@@ -14,6 +14,16 @@
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.15);
     top: 6rem;
     right: 6rem;
+    @include responsive(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include responsive(phone) {
+      height: 5rem;
+      width: 5rem;
+      top: 2rem;
+      right: 8rem;
+    }
   }
   &__background {
     height: 6rem;
@@ -25,6 +35,16 @@
     top: 6.5rem;
     right: 6.5rem;
     transition: all 0.5s;
+    @include responsive(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include responsive(phone) {
+      height: 4rem;
+      width: 4rem;
+      top: 2.5rem;
+      right: 8.5rem;
+    }
   }
   &__checkbox:checked ~ &__background {
     transform: scale(50);
@@ -49,6 +69,9 @@
     text-align: center;
     transition: all 0.5s cubic-bezier(0.77, 0.24, 0.35, 1.47);
     width: 100%;
+    @include responsive(phone) {
+      top: 30%;
+    }
   }
   &__item {
     margin: 1rem;
@@ -92,6 +115,9 @@
   &__icon {
     position: relative;
     margin-top: 3.5rem;
+    @include responsive(phone) {
+      margin-top: 2.5rem;
+    }
     &,
     &::before,
     &::after {

@@ -7,8 +7,15 @@
   padding: 6rem;
   font-size: 1.6rem;
   transform: skewX(-12deg);
+  @include responsive(tab-port) {
+    margin: 0 2rem;
+    transform: skewX(0deg);
+  }
   & > * {
     transform: skewX(12deg);
+    @include responsive(tab-port) {
+      transform: skewX(0deg);
+    }
   }
 
   &__img {
@@ -22,6 +29,11 @@
     position: relative;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    @include responsive(tab-port) {
+      width: 12.5rem;
+      height: 12.5rem;
+      transform: translateX(-2rem) skew(0);
+    }
 
     &--box {
       height: 100%;

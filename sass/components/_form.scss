@@ -50,6 +50,12 @@
   }
   &__radio-group {
     display: inline-block;
+    @include responsive(phone) {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
   }
   &__label-radio {
     font-size: 1.8rem;

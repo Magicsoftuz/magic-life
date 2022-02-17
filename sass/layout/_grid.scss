@@ -1,18 +1,12 @@
 .row {
   max-width: $grid-width;
-
   margin: 0 auto;
+  @include responsive(tab-port) {
+    max-width: $grid-width-small;
+  }
 
   &:not(:last-child) {
     margin-bottom: $space-vertical;
-  }
-
-  [class^="col-"] {
-    float: left;
-
-    &:not(:last-child) {
-      margin-right: $space-horizontal;
-    }
   }
 
   @include clearfix;
@@ -40,5 +34,16 @@
     width: calc(
       3 * ((100% - 3 * #{$space-horizontal}) / 4) + 2 * #{$space-horizontal}
     );
+  }
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $space-horizontal;
+    }
+    @include responsive(tab-port) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
   }
 }

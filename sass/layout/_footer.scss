@@ -18,6 +18,10 @@
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
     display: inline-block;
+    @include responsive(phone) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -56,5 +60,8 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+    @include responsive(tab-port) {
+      width: 100%;
+    }
   }
 }
